@@ -4,7 +4,12 @@ https://www.hackerrank.com/challenges/find-a-string/problem?isFullScreen=true&h_
 
 
 def count_substring(string, sub_string):
-    pass
+    count = 0
+    for each in range(0, len(string)-len(sub_string)+1):
+        if string[each:each+len(sub_string)] == sub_string:
+            count += 1
+    return count
+
 
 if __name__ == '__main__':
     string = input().strip()
